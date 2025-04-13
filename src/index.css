@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Patrick+Hand&family=Patrick+Hand+SC&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Patrick+Hand+SC&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-patrick: "Patrick, sans-serif";
+  --font-caveat: "Caveat";
+  --color-darkgray: #242424;
+}
+@layer base {
+  body {
+    @apply bg-darkgray font-patrick  text-white min-h-screen;
+  }
+}
+@layer components {
+  .wrapper {
+    @apply h-screen w-full grid place-items-center;
+  }
+  .box {
+    @apply bg-white text-darkgray p-[50px_60px] rounded-[10px] w-[80vw] max-w-[500px];
+  }
+  .btn {
+    @apply bg-black text-white p-2 rounded-md cursor-pointer transition hover:bg-black/80;
+  }
+  .message {
+    padding: 2px 8px;
+    max-width: 90%;
+    width: fit-content;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
+
